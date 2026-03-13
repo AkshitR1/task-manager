@@ -12,3 +12,7 @@ document.getElementById("taskList").appendChild(li);
 
 input.value="";
 }
+
+li.onclick = function(){
+this.remove()
+}
