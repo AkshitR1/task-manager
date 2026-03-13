@@ -16,3 +16,21 @@ input.value="";
 li.onclick = function(){
 this.remove()
 }
+
+function createTask(task){
+
+let li = document.createElement("li")
+
+let checkbox = document.createElement("input")
+checkbox.type = "checkbox"
+
+checkbox.onchange = function(){
+li.style.textDecoration = this.checked ? "line-through" : "none"
+}
+
+li.appendChild(checkbox)
+li.append(" " + task)
+
+document.getElementById("taskList").appendChild(li)
+
+}
